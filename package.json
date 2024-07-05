@@ -10,7 +10,7 @@
     "server:test": "cross-env NODE_ENV=test node index.js",
     "build": "vite build",
     "preview": "vite preview",
-    "test:e2e": "cross-env NODE_ENV=test playwright test",
+    "test:e2e": "playwright test",
     "test:vitest": "vitest run --root ./src",
     "test:node": "cross-env NODE_ENV=test node --test --test-concurrency=1",
     "lint": "eslint . --ext .js,.jsx"
