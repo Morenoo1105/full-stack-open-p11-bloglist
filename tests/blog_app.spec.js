@@ -4,8 +4,8 @@ import { createBlog } from "./helpers";
 
 describe("Blog app", () => {
   beforeEach(async ({ page, request }) => {
-    await request.post("http://localhost:3003/api/testing/reset");
-    await request.post("http://localhost:3003/api/users", {
+    await request.post("http://localhost:8000/api/testing/reset");
+    await request.post("http://localhost:8000/api/users", {
       data: {
         username: "root",
         name: "Superuser",
@@ -13,9 +13,9 @@ describe("Blog app", () => {
       },
     });
 
-    await page.goto("http://localhost:3003");
+    await page.goto("http://localhost:8000");
 
-    await page.waitForURL("http://localhost:3003");
+    await page.waitForURL("http://localhost:8000");
   });
 
   test("Login form is shown", async ({ page }) => {
@@ -145,7 +145,7 @@ describe("Blog app", () => {
         page,
         request,
       }) => {
-        await request.post("http://localhost:3003/api/users", {
+        await request.post("http://localhost:8000/api/users", {
           data: {
             username: "user",
             name: "normaluser",
