@@ -42,7 +42,6 @@ jobs:
       - name: Run Tests e2e
         run: |
           npm run build
-          npm run server:test &
           npm run test:e2e
 
       - uses: actions/upload-artifact@v4
